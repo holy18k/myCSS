@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The first one</title>
+  <style>
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .father {
+      display: flex;
+      display: -webkit-flex;
+    }
+
+    [class*='sub'] {
+      width: 200px;
+      height: 200px;
+      background: red;
+      margin: 0 20px;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="father">
+    <div class="sub1"></div>
+    <div class="sub2"></div>
+    <div class="sub3"></div>
+    <div class="sub4"></div>
+    <div class="sub5"></div>
+  </div>
+</div>
+</body>
+</html>
