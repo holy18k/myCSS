@@ -5,33 +5,57 @@
   <title>The first one</title>
   <style>
     .container {
-      max-width: 1280px;
+      max-width: 1200px;
+      height:300px;
       margin: 0 auto;
     }
 
+    /* 1.......设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。*/
     .father {
       display: flex;
+      display: -ms-flex;
+      display: -ms-flexbox;
       display: -webkit-flex;
+
+      /*垂直对齐方式(stretch 默认,flex-start 上对齐,flex-end下对齐,center 居中对齐)*/
+      align-items: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items:flex-end;
+      justify-content:center;
     }
 
     [class*='sub'] {
       width: 200px;
       height: 200px;
       background: red;
-      margin: 0 20px;
-      justify-content: space-between;
-      -webkit-justify-content: space-between;
+      text-align: center;
+      margin: 10px 10px;
+      /*-webkit-justify-content: space-between;*/
+      /*align-content: center;*/
+      /*flex-direction: row-reverse;*/
+      /*-webkit-flex-direction: row-reverse;*/
     }
   </style>
 </head>
 <body>
 <div class="container">
   <div class="father">
-    <div class="sub1"></div>
-    <div class="sub2"></div>
-    <div class="sub3"></div>
-    <div class="sub4"></div>
-    <div class="sub5"></div>
+    <div class="sub1">
+      the first sub
+    </div>
+    <div class="sub2">
+      the second sub
+    </div>
+    <div class="sub3">
+      the third sub
+    </div>
+    <div class="sub4">
+      the fourth sub
+    </div>
+
+
+
   </div>
 </div>
 </body>
